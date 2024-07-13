@@ -5,6 +5,6 @@
 <h2>Segue uma lista das features implementadas:</h2>
 
 - Reorganização do projeto em packages diferentes.
-- A Classe Cliente só pode ser instanciada através da classe Banco usando o metodo "criarCliente", após isso ela é adicionada a lista de Clientes daquele Banco especifico.
+- A Classe Cliente só pode ser instanciada através da classe Banco usando o metodo "criarCliente", após isso o cliente é adicionado a lista de Clientes daquele Banco especifico.
 - Um Cliente após instanciado, ele é dado uma Conta Corrente e uma Conta Poupança.
 - Na Classe Banco foi criado os metodos para procurar, criar e remover um Cliente desejado.
