@@ -1,12 +1,6 @@
-package conta;
-
-import cliente.Cliente;
+package banco.conta;
 
 public class ContaCorrente extends Conta{
-
-    public ContaCorrente(Cliente cliente) {
-        super(cliente);
-    }
 
     @Override
     public void imprimirExtrato() {

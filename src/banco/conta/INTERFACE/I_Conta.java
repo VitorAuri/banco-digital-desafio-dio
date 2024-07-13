@@ -1,6 +1,6 @@
-package conta.INTERFACE;
+package banco.conta.INTERFACE;
 
-import conta.Conta;
+import banco.conta.Conta;
 
 public interface I_Conta {
 

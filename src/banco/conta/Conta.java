@@ -1,7 +1,7 @@
-package conta;
+package banco.conta;
 
-import cliente.Cliente;
-import conta.INTERFACE.I_Conta;
+import banco.Cliente;
+import banco.conta.INTERFACE.I_Conta;
 
 public abstract class Conta implements I_Conta {
 
@@ -11,12 +11,10 @@ public abstract class Conta implements I_Conta {
     protected int agencia;
     protected int numero;
     protected double saldo;
-    protected Cliente cliente;
 
-    public Conta(Cliente cliente) {
+    public Conta() {
         this.agencia = AGENCIA_PADRAO;
         this.numero = SEQUENCIAL++;
-        this.cliente = cliente;
     }
 
     @Override
@@ -36,7 +34,6 @@ public abstract class Conta implements I_Conta {
     }
 
     protected void imprimirInfosComuns() {
-        System.out.println("Cliente: " + this.cliente.getNome());
         System.out.println("Agencia: " + this.agencia);
         System.out.println("Numero: " + this.numero);
         System.out.println("Saldo: " + this.saldo);
