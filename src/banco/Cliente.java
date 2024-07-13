@@ -16,13 +16,13 @@ public class Cliente {
     }
 
     public void imprimirExtratoCorrente() {
-        System.out.println("- - - "+this.nome.toUpperCase()+" - - -");
         contaCorrente.imprimirExtrato();
+        System.out.println("Nome: " + this.nome);
     }
 
     public void imprimirExtratoPoupanca() {
-        System.out.println("- - - "+this.nome.toUpperCase()+" - - -");
         contaPoupanca.imprimirExtrato();
+        System.out.println("Nome: " + this.nome);
     }
 
     @Override

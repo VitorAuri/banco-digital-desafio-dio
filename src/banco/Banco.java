@@ -9,11 +9,31 @@ public class Banco {
 
     public Banco(String nome) {
         this.nome = nome;
-        this.contaList = new ArrayList<Cliente>();
+        this.contaList = new ArrayList<>();
     }
 
-    public void adicionarCliente(String nomeCliente) {
+    public void criarCliente(String nomeCliente) {
         contaList.add(new Cliente(nomeCliente));
+    }
+
+    public void removerCliente(String nomeCliente) {
+        boolean clienteEncontrado = false;
+        if(!contaList.isEmpty()) {
+            for (Cliente cliente : contaList) {
+                if(cliente.getNome().equalsIgnoreCase(nomeCliente)) {
+                    clienteEncontrado = true;
+                    contaList.remove(cliente);
+                    System.out.println("Cliente removido.");
+                    break;
+                }
+            }
+            if (!clienteEncontrado) {
+                System.out.println("Cliente não encontrado.");
+            }
+        }
+        else {
+            System.out.println("Lista se encontra vazia.");
+        }
     }
 
     public void procurarCliente(String nome) {
@@ -22,12 +42,13 @@ public class Banco {
             for (Cliente cliente : contaList) {
                 if(cliente.getNome().equalsIgnoreCase(nome)) {
                     clienteEncontrado = true;
+                    System.out.println("! CLIENTE ENCONTRADO, SEGUE INFORMAÇÕES !");
                     cliente.imprimirExtratoCorrente();
                     cliente.imprimirExtratoPoupanca();
                     break;
                 }
             }
-            if(clienteEncontrado==false) {
+            if(!clienteEncontrado) {
                 System.out.println("Cliente não encontrado.");
             }
         }
